@@ -1,1 +1,12 @@
 <h2>Users list component</h2>
+<section *ngIf="post$ | async as users">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users">
+      ID: {{ user.id }}
+      <br>
+      Nick: {{ user.nombre }}
+      <br>
+      Edad: {{ user.edad }}
+    </li>
+  </ul>
+</section>
